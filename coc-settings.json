@@ -1,0 +1,4 @@
+{
+  "eslint.packageManager": "pnpm",
+  "coc.preferences.formatOnSave": true
+}
