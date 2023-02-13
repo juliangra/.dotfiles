@@ -43,9 +43,7 @@ end
 
 null_ls.setup({
 	sources = {
-		formatting.prettierd,
 		formatting.stylua,
-		diagnostics.eslint_d,
 	},
 	-- Format on save
 	on_attach = function(client, bufnr)

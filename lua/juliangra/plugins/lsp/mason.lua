@@ -17,18 +17,12 @@ mason.setup()
 
 mason_lspconfig.setup({
 	ensure_installed = {
-		"tsserver",
-		"html",
-		"cssls",
-		"tailwindcss",
-		"sumneko_lua",
+		"lua_ls",
 	},
 })
 
 mason_null_ls.setup({
 	ensure_installed = {
-		"prettierd",
 		"stylua",
-		"eslint_d",
 	},
 })

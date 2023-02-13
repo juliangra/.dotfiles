@@ -48,3 +48,20 @@ cmp.setup({
 		}),
 	},
 })
+
+-- Helper function to return table item based on index
+function Values(t)
+	local i = 0
+	return function()
+		i = i + 1
+		return t[i]
+	end
+end
+
+-- Helper function to loop over languages that should be disabled for nvim-cmp
+local disabled_languages = { "typescriptreact", "javascriptreact", "javascript", "typescript" }
+for lang in Values(disabled_languages) do
+	cmp.setup.filetype(lang, {
+		enabled = false,
+	})
+end

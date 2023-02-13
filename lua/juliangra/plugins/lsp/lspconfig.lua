@@ -8,11 +8,11 @@ if not cmp_nvim_lsp_status then
   return
 end
 
-local typescript_setup, typescript = pcall(require, "typescript")
-if not cmp_nvim_lsp_status then
-  return
-end
-
+-- local typescript_setup, typescript = pcall(require, "typescript")
+-- if not cmp_nvim_lsp_status then
+--   return
+-- end
+--
 local keymap = vim.keymap
 
 -- enable keybinds for available lsp server
@@ -35,11 +35,11 @@ local on_attach = function(client, bufnr)
   keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
   -- typescript specific keymaps (e.g. rename file and update imports)
-  if client.name == "tsserver" then
-    keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>") -- rename file and update imports
-    keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>") -- organize imports (not in youtube nvim video)
-    keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>") -- remove unused variables (not in youtube nvim video)
-  end
+  -- if client.name == "tsserver" then
+  --   keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>") -- rename file and update imports
+  --   keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>") -- organize imports (not in youtube nvim video)
+  --   keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>") -- remove unused variables (not in youtube nvim video)
+  -- end
 end
 
 -- used to enable autocompletion (assign to every lsp server config)
@@ -68,11 +68,11 @@ lspconfig["html"].setup({
 -- })
 
 -- configure css server
-lspconfig["cssls"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-})
-
+-- lspconfig["cssls"].setup({
+--   capabilities = capabilities,
+--   on_attach = on_attach,
+-- })
+--
 -- configure go server
 lspconfig["gopls"].setup({
   capabilities = capabilities,
@@ -80,20 +80,20 @@ lspconfig["gopls"].setup({
 })
 
 -- configure tailwindcss server
-lspconfig["tailwindcss"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-})
-
+-- lspconfig["tailwindcss"].setup({
+--   capabilities = capabilities,
+--   on_attach = on_attach,
+-- })
+--
 -- configure emmet language server
-lspconfig["emmet_ls"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-  filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
-})
+-- lspconfig["emmet_ls"].setup({
+--   capabilities = capabilities,
+--   on_attach = on_attach,
+--   filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+-- })
 
 -- configure lua server (with special settings)
-lspconfig["sumneko_lua"].setup({
+lspconfig["lua_ls"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
   settings = { -- custom settings for lua
