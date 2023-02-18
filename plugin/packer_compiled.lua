@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/Users/julian/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/Users/julian/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/julian/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -259,6 +264,11 @@ _G.packer_plugins = {
     path = "/Users/julian/.local/share/nvim/site/pack/packer/start/startup.nvim",
     url = "https://github.com/startup-nvim/startup.nvim"
   },
+  ["telescope-env.nvim"] = {
+    loaded = true,
+    path = "/Users/julian/.local/share/nvim/site/pack/packer/start/telescope-env.nvim",
+    url = "https://github.com/LinArcX/telescope-env.nvim"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/Users/julian/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -278,6 +288,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/julian/.local/share/nvim/site/pack/packer/start/typescript.nvim",
     url = "https://github.com/jose-elias-alvarez/typescript.nvim"
+  },
+  ["vim-case-convert"] = {
+    loaded = true,
+    path = "/Users/julian/.local/share/nvim/site/pack/packer/start/vim-case-convert",
+    url = "https://github.com/chiedo/vim-case-convert"
   },
   ["vim-jsdoc"] = {
     loaded = true,
@@ -303,6 +318,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/julian/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["vim-virtualenv"] = {
+    loaded = true,
+    path = "/Users/julian/.local/share/nvim/site/pack/packer/start/vim-virtualenv",
+    url = "https://github.com/jmcantrell/vim-virtualenv"
   }
 }
 

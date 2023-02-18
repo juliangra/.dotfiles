@@ -46,8 +46,10 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- Telescope
+keymap.set("n", "<leader>ft", "<cmd>NvimTreeFindFile<CR>")
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
 keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>")
+keymap.set("n", "<leader>fe", "<cmd>Telescope env<CR>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope file_browser<CR>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
@@ -58,7 +60,7 @@ keymap.set("n", "<leader>gg", ":LazyGit<CR>")
 local opts = { silent = true, nowait = true }
 
 -- Code action menu
-keymap.set("n", "<leader>lc", "<Plug>(coc-codeaction)", opts)
+keymap.set("n", "<leader>lc", "<Plug>(coc-codeaction)", { silent = true, nowait = true })
 
 -- Rename
 keymap.set("n", "<leader>rn", "<Plug>(coc-rename)", { silent = true })

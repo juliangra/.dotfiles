@@ -61,6 +61,7 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
 	use({ "nvim-telescope/telescope-ui-select.nvim" }) -- for showing lsp code actions
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
+	use({ "LinArcX/telescope-env.nvim" })
 
 	-- Autocompletion
 	use("hrsh7th/nvim-cmp")
@@ -154,6 +155,15 @@ return packer.startup(function(use)
 
 	-- JsDoc
 	use("heavenshell/vim-jsdoc")
+
+	-- venvsetup
+	use("jmcantrell/vim-virtualenv")
+
+	-- Case converted
+	use("chiedo/vim-case-convert")
+
+	-- GitHub copilot
+	use("github/copilot.vim")
 
 	if packer_bootstrap then
 		require("packer").sync()
